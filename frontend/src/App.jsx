@@ -37,7 +37,7 @@ function App() {
     if (!token) return;
 try {
   const response = await fetch(
-    'http://localhost:5001/api/applications',
+    'https://internship-job-portal-2.onrender.com/api/applications',
     {
       headers: {
         Authorization: `Bearer ${token}`
@@ -63,7 +63,7 @@ try {
     setAdminError('');
 try {
   const response = await fetch(
-    'http://localhost:5001/api/admin/login',
+    'https://internship-job-portal-2.onrender.com/api/admin/login',
     {
       method: 'POST',
       headers: {
@@ -134,7 +134,7 @@ const opportunityData = {
 
 try {
   const response = await fetch(
-    'http://localhost:5001/api/opportunities',
+    'https://internship-job-portal-2.onrender.com/api/opportunities',
     {
       method: 'POST',
       headers: {
@@ -175,7 +175,7 @@ try {
     }
 try {
   const response = await fetch(
-    `http://localhost:5001/api/opportunities/${selectedOpportunity._id}`,
+    `https://internship-job-portal-2.onrender.com/api/opportunities/${selectedOpportunity._id}`,
     {
       method: 'PUT',
       headers: {
@@ -229,7 +229,7 @@ if (!window.confirm('Are you sure you want to delete this opportunity?')) {
 
 try {
   const response = await fetch(
-    `http://localhost:5001/api/opportunities/${opportunityId}`,
+    `https://internship-job-portal-2.onrender.com/api/opportunities/${opportunityId}`,
     {
       method: 'DELETE',
       headers: {
@@ -270,7 +270,7 @@ if (!selectedOpportunity) {
 
 try {
   const response = await fetch(
-    'http://localhost:5001/api/applications',
+    'https://internship-job-portal-2.onrender.com/api/applications',
     {
       method: 'POST',
       headers: {
@@ -317,7 +317,7 @@ if (!window.confirm('Are you sure you want to delete this application?')) {
 
 try {
   const response = await fetch(
-    `http://localhost:5001/api/applications/${applicationId}`,
+    `https://internship-job-portal-2.onrender.com/api/applications/${applicationId}`,
     {
       method: 'DELETE',
       headers: {
@@ -347,7 +347,7 @@ try {
   useEffect(() => {
     setIsLoading(true);
     setLoadError('');
-fetch('http://localhost:5001/api/opportunities')
+fetch('https://internship-job-portal-2.onrender.com/api/opportunities')
   .then((response) => response.json())
   .then((data) => {
     setOpportunities(data);
